@@ -24,10 +24,13 @@ The goal is to use the vr controllers to control the car.
 
 7- I defined this command to run the server
 ```
-./startCar" to make a shortcut and do not write all of this command:
-"cd ~/SunFounder_PiCar-V/remote_control
+#./startCar" to make a shortcut and do not write all of this command:
+
+cd ~/SunFounder_PiCar-V/remote_control
+
 python3 manage.py migrate
-sudo ./start"
+
+sudo ./start
 
 ```
 8- I have written a C# file that i uploaded to this repository named "Car.cs" that when i run it I can control the car via unity using W,A,S,D and control the camera using the arrows on the keyboard.
