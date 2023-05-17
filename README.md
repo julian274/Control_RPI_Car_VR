@@ -49,7 +49,8 @@ chmod +x mjpg_streamer
 
 ## SCRIPTS:
 
-### "SanpshotStreamViewer.cs" This is the code that I'm using in Unity to view the stream. I'm reading from a snapshot server 30fps. and un pause for 4 times it works fine.
+### "SanpshotStreamViewer.cs" 
+This is the code that I'm using in Unity to view the stream. I'm reading from a snapshot server 30fps. and un pause for 4 times it works fine.
 
 ### Car.cs Code Explination:
 
