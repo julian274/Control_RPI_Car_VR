@@ -68,8 +68,5 @@ I would like to express my sincere gratitude to the University of Haifa and my m
 
 I would like to extend a special thanks to Prof. Roi Poranne for their mentorship, expertise, and continuous encouragement. Their guidance has been instrumental in shaping my understanding of computer graphics and helping me achieve my goals.
 
-
- 
-#Enjoy.
-
+# Enjoy!!!
  
