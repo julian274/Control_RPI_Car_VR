@@ -23,7 +23,7 @@ I encourage anyone that is interested in this project to get your hands on the R
      sudo ./start
           
 ```
-    -To run the MJPEG Streamer u need to download the requierd files then follow these commands on a different terminal (because we want to execute two commands together):
+To run the MJPEG Streamer u need to download the requierd files then follow these commands on a different terminal (because we want to execute two commands together):
 ```
 #First
 cd SunFounder_PiCar-V
