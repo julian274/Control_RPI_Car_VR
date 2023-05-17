@@ -1,51 +1,29 @@
 # PI-Car VR
 
-In this project, i want to control the Sunfounder Raspberry PI car v2.0 via the Meta Quest 2 controllers. I am using unity.
+In this project, I managed to control the Sunfounder Raspberry PI car v2.0 via the Meta Quest 2 controllers. Using unity.
+It was challenging to work on this project.
+I encourage anyone that is interested in this project to get your hands on the RPI Car and continue working on what i have started.
 
-For this momment i'm using the W,A,S,D keys to control the car and the arrow keys to control the camera using unity.
+## Steps to use the code: 
+1- Install the Raspberry PI OS on the Car.
 
-Each key sends an http request to the server that runs on the car.
+2- Clone the source code https://github.com/sunfounder/SunFounder_PiCar-V .
 
-The goal is to use the vr controllers to control the car.
+3- U can see the instructions about how to start the car here: https://docs.sunfounder.com/projects/picar-v/en/latest/ .
 
-## Steps: 
+4- Clone this unity Project that is in this repository https://github.com/julian274/Control_RPI_Car_VR .
 
-1- For the first two weeks i tried to get access to the user that was downloaded to the Raspberry PI OS, but the password was incorrect, i tried every thing to change it but it did't work.
+5- Follow these steps to run the car:
+   - Send these commands to run the server 
+    ```
+     cd ~/SunFounder_PiCar-V/remote_control
 
-2- I faced a problem with the car build the hdmi cable was not gonna fit i had to remove a motor to connect it so i had to work on the car itself to raise the Raspberry PI Chip to get access to the hdmi input.
+     python3 manage.py migrate
 
-3- So i had to reinstall the OS on the Car and re-do all the setup from scratch, I Loged in via new user named "PI" and the default password was "raspberry" I have changed it to "123".
-
-4- I cloned the source code from this repository: https://github.com/sunfounder/SunFounder_PiCar-V
-
-5- Then I was running the server on port 8000. 
-
-6- To run the server first of all we need to connect the car to wifi, then log-in to the user "PI" after that we just send "./startCar" to run the server.
-
-7- I defined this command to run the server
-```
-#./startCar" to make a shortcut and do not write all of this command:
-
-cd ~/SunFounder_PiCar-V/remote_control
-
-python3 manage.py migrate
-
-sudo ./start
-
-```
-8- I have written a C# file that i uploaded to this repository named "Car.cs" that when i run it I can control the car via unity using W,A,S,D and control the camera using the arrows on the keyboard.
-
-9- "SanpshotStreamViewer.cs" This is the code that I'm using in Unity to view the stream. I'm reading from a snapshot server 30fps. But i still getting the same error but after i pause and un pause for 4 times it works fine.
-
-
-### Important update: It seems like the source code that they told me to clone in the servo configiration docs and the server run command does not run the mjpeg streamer. It runs an HTTP server that can not stream on unity because its not a snapshot or a stream. The servo confi told me to clone a branch V3.0 of the source code. And to add for this there is no command to run the mjpeg streamer or there is no command to let me know the server that runs on the mjpeg streamer.
-In my last two weeks I have been working on unity just to make the mjgeg stream appear on unity the issue is that the mjpeg streamer was never running.
-There is two ways to solve this problem the first one is to find a way to run the mjpeg streamer then to find the URL that i can see it and put it in unity, and the second one is to modify a new function in the source code and then clone it again to the Car, the function will be to take snapshots every second or 3 snapshots every second and in unity we will do a loop that gets these snapshots to create a video.
-
-## Update:
-
-The very last update is that i have managed to run the mjpeg_stremer and i can now see the stream via the mjpeg streamer. This is a progress for me because at first i could't play the mjpeg_streamer, I downloaded packages so i can run the mjpeg streamer that they were not in the source code.
-We need to do : 
+     sudo ./start
+          
+     ```
+     - To run the MJPEG Streamer u need to download the requierd files then follow these commands on a different terminal (because we want to execute two commands together):
 ```
 #First
 cd SunFounder_PiCar-V
@@ -62,20 +40,36 @@ chmod +x mjpg_streamer
 #Or to create a HTTP server for snapshots using MJPG-Streamer, you can use the following command:
 ./mjpg_streamer -i "./input_uvc.so -r 640x320 -f 30 -q 100" -o "./output_http.so -w ./www_snapshot"
 
-
 ```
-### Today's Update: "SanpshotStreamViewer.cs" This is the code that I'm using in Unity to view the stream. I'm reading from a snapshot server 30fps. But i still getting the same error but after i pause and un pause for 4 times it works fine.
-I'm writing a code to control the car using the Meta Quest 2 controllers.
+6- Connect the VR to your PC.
 
-## Car.cs Code Explination:
+7- Run the project on Unity.
+
+8- Final Step divertiti (HAVE FUN).
+
+## SCRIPTS:
+
+### "SanpshotStreamViewer.cs" This is the code that I'm using in Unity to view the stream. I'm reading from a snapshot server 30fps. and un pause for 4 times it works fine.
+
+### Car.cs Code Explination:
 
 I defined a new function named "SendCommand" that assest me to call the Car API without to do initialize every single time the client from the begining, we send to this function the url that we want to get to and the function will call tha API.
+Use W,A,S,D keys to control the car and the arrow keys to control the camera using unity, using Car.cs script.
+Each key sends an http request to the server that runs on the car.
 
-## VRControl.cs Explination:
+### VRControl.cs Explination:
 
-Its just the first script for now, I want to try it first then I'll update it if necessary.
+We use this script to control the car movment with the META QUEST 2 controllers.
+You can upgrade this script, you need just to play with it untill it works smoothly.
  
-# Finnished 
+## Thanks and Credits
 
+I would like to express my sincere gratitude to the University of Haifa and my mentor, Prof. Roi Poranne, for their invaluable support throughout this project. This project was conducted under the guidance of Prof. Roi in the Computer Graphics Laboratory.
+
+I would like to extend a special thanks to Prof. Roi Poranne for their mentorship, expertise, and continuous encouragement. Their guidance has been instrumental in shaping my understanding of computer graphics and helping me achieve my goals.
+
+
+ 
+#Enjoy.
 
  
