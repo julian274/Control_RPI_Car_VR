@@ -41,7 +41,7 @@ chmod +x mjpg_streamer
 ./mjpg_streamer -i "./input_uvc.so -r 640x320 -f 30 -q 100" -o "./output_http.so -w ./www_snapshot"
 
 ```
-6- Connect the VR to your PC.
+6- Connect the VR to your PC, and download the requierd VR packeges.
 
 7- Run the project on Unity.
 
