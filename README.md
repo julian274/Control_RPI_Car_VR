@@ -66,7 +66,7 @@ You can upgrade this script, you need just to play with it untill it works smoot
 
 I would like to express my sincere gratitude to the University of Haifa and my mentor, Prof. Roi Poranne, for their invaluable support throughout this project. This project was conducted under the guidance of Prof. Roi in the Computer Graphics Laboratory.
 
-I would like to extend a special thanks to Prof. Roi Poranne for their mentorship, expertise, and continuous encouragement. Their guidance has been instrumental in shaping my understanding of computer graphics and helping me achieve my goals.
+I would like to extend a special thanks to Prof. Roi Poranne for his mentorship, expertise, and continuous encouragement. His guidance has been instrumental in shaping my understanding of computer graphics and helping me achieve my goals.
 
 # Enjoy!!!
  
