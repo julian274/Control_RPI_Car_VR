@@ -15,15 +15,15 @@ I encourage anyone that is interested in this project to get your hands on the R
 
 5- Follow these steps to run the car:
    - Send these commands to run the server 
-    ```
+```
      cd ~/SunFounder_PiCar-V/remote_control
 
      python3 manage.py migrate
 
      sudo ./start
           
-     ```
-     - To run the MJPEG Streamer u need to download the requierd files then follow these commands on a different terminal (because we want to execute two commands together):
+```
+    -To run the MJPEG Streamer u need to download the requierd files then follow these commands on a different terminal (because we want to execute two commands together):
 ```
 #First
 cd SunFounder_PiCar-V
